@@ -65,6 +65,7 @@ public class MobileUnit : MonoBehaviour
                 {
                     cAgent.transform.position = pos;
                     cAgent.transform.rotation = rot;
+                    //TODO: set parent
                 }
                 allConfig = false;
             }

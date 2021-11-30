@@ -6,14 +6,12 @@ using System.Linq;
 
 public class keypressmove : MonoBehaviour
 {
-    // public GameObject part;
-    //public GameObject[] Roboparts;
-    public float speed = 10f;
+    public float speed = 20f;
 
     private RectTransform rect;
 
-    //public List<GameObject> Parts = new List<GameObject>();
     public List<GameObject> Roboparts = new List<GameObject>();
+    private List<Collider> colliders = new List<Collider>();
 
     //private int p = 0;
 
@@ -33,41 +31,68 @@ public class keypressmove : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
-    {
-        JoystickMovement();
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(0.5f, 0f, 0f);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(-0.5f, 0f, 0f);
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(0.0f, 0f, -0.5f);
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(0.0f, 0f, 0.5f);
-        }
-    }
 
-    private void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         Debug.Log(col.gameObject.name);
 
-        CollisionDetection mu = col.GetComponent<CollisionDetection>();
-        if (mu == null) { return; }
+        CollisionDetection CD = col.GetComponent<CollisionDetection>();
+        if (CD == null) { return; }
 
         // foreach (GameObject p in Roboparts)
         //{
         col.enabled = false;
-        col.GetComponentInParent<MobileUnit>().enabled = true;
-        col.GetComponent<CollisionDetection>().enabled = true;
+        MobileUnit mu = col.GetComponentInParent<MobileUnit>();
+        if (mu != null) { mu.enabled = true; }
+        CollisionDetection cd = col.GetComponent<CollisionDetection>();
+        if (cd != null) { cd.enabled = true; }
+        // col.GetComponentInParent<MobileUnit>().enabled = true;
+        // col.GetComponent<CollisionDetection>().enabled = true;
         Roboparts.Add(col.gameObject);
+        colliders.Add(col);
         Debug.Log("hit");
+        col.transform.parent = gameObject.transform;
+    }
+
+    private void Update()
+    {
+        JoystickMovement();
+        /* if (Input.GetKey(KeyCode.LeftArrow))
+         {
+             transform.Translate(0.5f, 0f, 0f);
+         }
+         if (Input.GetKey(KeyCode.RightArrow))
+         {
+             transform.Translate(-0.5f, 0f, 0f);
+         }
+         if (Input.GetKey(KeyCode.UpArrow))
+         {
+             transform.Translate(0.0f, 0f, -0.5f);
+         }
+         if (Input.GetKey(KeyCode.DownArrow))
+         {
+             transform.Translate(0.0f, 0f, 0.5f);
+         }
+        /*/
+
+        if (Input.GetButtonDown("West"))
+        {
+            Debug.Log("colliders.Count:" + colliders.Count);
+            foreach (Collider cols in colliders)
+            {
+                cols.transform.parent = null;
+
+                NavMeshAgent na = cols.GetComponentInParent<NavMeshAgent>();
+                if (na != null) { na.enabled = false; }
+
+                MobileUnit mu = cols.GetComponentInParent<MobileUnit>();
+                if (mu != null) { mu.enabled = false; }
+                CollisionDetection cd = cols.GetComponent<CollisionDetection>();
+                if (cd != null) { cd.enabled = false; }
+                Debug.Log("Dropped");
+            }
+            colliders.Clear();
+        }
     }
 
     private void JoystickMovement()
