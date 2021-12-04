@@ -51,7 +51,7 @@ public class keypressmove : MonoBehaviour
         Roboparts.Add(col.gameObject);
         colliders.Add(col);
         Debug.Log("hit");
-        col.transform.parent = gameObject.transform;
+        col.transform.parent.transform.parent = gameObject.transform;
     }
 
     private void Update()
@@ -80,16 +80,18 @@ public class keypressmove : MonoBehaviour
             Debug.Log("colliders.Count:" + colliders.Count);
             foreach (Collider cols in colliders)
             {
-                cols.transform.parent = null;
-
-                NavMeshAgent na = cols.GetComponentInParent<NavMeshAgent>();
-                if (na != null) { na.enabled = false; }
+                Debug.Log("Dropped1: " + cols.gameObject.name);
 
                 MobileUnit mu = cols.GetComponentInParent<MobileUnit>();
-                if (mu != null) { mu.enabled = false; }
+                if (mu != null)
+                { mu.enabled = false; }
                 CollisionDetection cd = cols.GetComponent<CollisionDetection>();
-                if (cd != null) { cd.enabled = false; }
-                Debug.Log("Dropped");
+                if (cd != null)
+                { cd.enabled = false; }
+
+                cols.transform.parent.transform.parent = null;
+
+                Debug.Log("Dropped2: " + cols.gameObject.name);
             }
             colliders.Clear();
         }

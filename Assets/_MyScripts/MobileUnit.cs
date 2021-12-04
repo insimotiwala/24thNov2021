@@ -12,6 +12,7 @@ public class MobileUnit : MonoBehaviour
     public GameObject Factory; //Factory Prefab To Instantiate
     public GameObject ClumpMesh;
     public Dictionary<GameObject, GameObject> Configure = new Dictionary<GameObject, GameObject>();
+    public float speed;
 
     [HideInInspector]
     public bool _reachedTarget = false;
@@ -59,6 +60,7 @@ public class MobileUnit : MonoBehaviour
                 GameObject cAgent = kvp.Value;
                 Vector3 pos = kvp.Key.transform.position;
                 Quaternion rot = kvp.Key.transform.rotation;
+                Debug.Log(pos);
                 cAgent.transform.position = Vector3.Lerp(cAgent.transform.position, pos, Time.deltaTime);
                 cAgent.transform.rotation = Quaternion.Lerp(cAgent.transform.rotation, rot, Time.deltaTime);
                 if (Vector3.Distance(cAgent.transform.position, pos) < 0.05f)

@@ -13,6 +13,9 @@ TagManager:
   - Clump02
   - Roll
   - Stage
+  - Miniagents
+  - MA2
+  - MA3
   layers:
   - Default
   - TransparentFX
