@@ -66,7 +66,7 @@ public class MAFactory : MonoBehaviour
             // GameObject prefab = Prefabs[Random.Range(0, Prefabs.Length)]; //random prefab
 
             GameObject go = Instantiate(prefab, this.transform.position, Quaternion.identity);
-            MobileUnit mu = go.GetComponent<MobileUnit>();
+            mobileclumpunit mu = go.GetComponent<mobileclumpunit>();
             mu.Target = Target;
         }
     }

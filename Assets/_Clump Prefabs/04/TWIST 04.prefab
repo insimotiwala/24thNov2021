@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3810153334644766016}
   - component: {fileID: 7194299227856747294}
-  - component: {fileID: 7847174752438701822}
+  - component: {fileID: 7891216364848761921}
   m_Layer: 0
   m_Name: TWIST 04
   m_TagString: Agent
@@ -56,7 +56,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7847174752438701822
+--- !u!114 &7891216364848761921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,13 +65,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3333732706549582369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b5443035d47d6046a7f4f59a5445162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 857482327960272864, guid: 34c6d4602cc6e9941b0149032c283047, type: 3}
   Positions:
   - {fileID: 5382045973616786202}
-  Factory: {fileID: 4847843599851577219, guid: 9b080a887fc10a841ad987a4039867da, type: 3}
+  Factory: {fileID: 212546135698811953, guid: 9358b8f7d27e7874d899691d76fa0168, type: 3}
   ClumpMesh: {fileID: 4178040495020477299}
   _reachedTarget: 0
 --- !u!1 &4178040495020477299

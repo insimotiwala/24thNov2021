@@ -25,8 +25,8 @@ public class keypressmove : MonoBehaviour
 
         foreach (GameObject p in Roboparts)
         {
-            p.GetComponent<MobileUnit>().enabled = false;
-            p.GetComponentInChildren<CollisionDetection>().enabled = false;
+            //  p.GetComponent<MobileUnit>().enabled = false;
+            //  p.GetComponentInChildren<CollisionDetection>().enabled = false;
         }
     }
 
@@ -34,46 +34,49 @@ public class keypressmove : MonoBehaviour
 
     public void OnTriggerEnter(Collider col)
     {
-        Debug.Log(col.gameObject.name);
-
-        CollisionDetection CD = col.GetComponent<CollisionDetection>();
-        if (CD == null) { return; }
+        // Debug.Log(col.gameObject.name);
+        if (Roboparts.Contains(col.gameObject))
+        {
+            return;
+        }
+        // CollisionDetection CD = col.GetComponent<CollisionDetection>();
+        //  if (CD == null) { return; }
 
         // foreach (GameObject p in Roboparts)
         //{
         col.enabled = false;
         MobileUnit mu = col.GetComponentInParent<MobileUnit>();
+        if (mu == null) { return; }
+        //  CollisionDetection cd = col.GetComponent<CollisionDetection>();
+        // if (cd != null) { cd.enabled = true; }
         if (mu != null) { mu.enabled = true; }
-        CollisionDetection cd = col.GetComponent<CollisionDetection>();
-        if (cd != null) { cd.enabled = true; }
-        // col.GetComponentInParent<MobileUnit>().enabled = true;
         // col.GetComponent<CollisionDetection>().enabled = true;
         Roboparts.Add(col.gameObject);
         colliders.Add(col);
         Debug.Log("hit");
-        col.transform.parent.transform.parent = gameObject.transform;
+        // col.transform.parent.transform.parent = gameObject.transform;
+        col.GetComponentInParent<MobileUnit>().StartConfigure();
     }
 
     private void Update()
     {
         JoystickMovement();
-        /* if (Input.GetKey(KeyCode.LeftArrow))
-         {
-             transform.Translate(0.5f, 0f, 0f);
-         }
-         if (Input.GetKey(KeyCode.RightArrow))
-         {
-             transform.Translate(-0.5f, 0f, 0f);
-         }
-         if (Input.GetKey(KeyCode.UpArrow))
-         {
-             transform.Translate(0.0f, 0f, -0.5f);
-         }
-         if (Input.GetKey(KeyCode.DownArrow))
-         {
-             transform.Translate(0.0f, 0f, 0.5f);
-         }
-        /*/
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(0.5f, 0f, 0f);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(-0.5f, 0f, 0f);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(0.0f, 0f, -0.5f);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(0.0f, 0f, 0.5f);
+        }
 
         if (Input.GetButtonDown("West"))
         {
@@ -85,9 +88,9 @@ public class keypressmove : MonoBehaviour
                 MobileUnit mu = cols.GetComponentInParent<MobileUnit>();
                 if (mu != null)
                 { mu.enabled = false; }
-                CollisionDetection cd = cols.GetComponent<CollisionDetection>();
-                if (cd != null)
-                { cd.enabled = false; }
+                // CollisionDetection cd = cols.GetComponent<CollisionDetection>();
+                // if (cd != null)
+                //  { cd.enabled = false; }
 
                 cols.transform.parent.transform.parent = null;
 

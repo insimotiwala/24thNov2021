@@ -162,7 +162,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 58879657}
-  - component: {fileID: 58879659}
   - component: {fileID: 58879658}
   m_Layer: 0
   m_Name: Gun
@@ -193,7 +192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58879656}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -203,30 +202,9 @@ MonoBehaviour:
   - {fileID: 1666840275}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 58879656}
-  speed: 100
+  speed: 1
+  MoveDistance: 20
   _reachedTarget: 0
---- !u!195 &58879659
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58879656}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &202008668
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +274,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 435211182}
-  - component: {fileID: 435211181}
   - component: {fileID: 435211180}
   m_Layer: 0
   m_Name: Gun2
@@ -312,7 +289,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435211179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -322,30 +299,9 @@ MonoBehaviour:
   - {fileID: 35810274}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1347675964}
-  speed: 100
+  speed: 1
+  MoveDistance: 20
   _reachedTarget: 0
---- !u!195 &435211181
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435211179}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.88
-  m_Speed: 10
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &435211182
 Transform:
   m_ObjectHideFlags: 0
@@ -520,7 +476,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618243175}
-  - component: {fileID: 618243177}
   - component: {fileID: 618243176}
   m_Layer: 0
   m_Name: Minirobo1
@@ -551,7 +506,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618243174}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -561,30 +516,9 @@ MonoBehaviour:
   - {fileID: 1532105207}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 4958328055080338111}
-  speed: 100
+  speed: 1
+  MoveDistance: 20
   _reachedTarget: 0
---- !u!195 &618243177
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618243174}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &625619655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,7 +1426,6 @@ GameObject:
   - component: {fileID: 1347675968}
   - component: {fileID: 1347675967}
   - component: {fileID: 1347675966}
-  - component: {fileID: 1347675965}
   m_Layer: 0
   m_Name: Gunmesh2
   m_TagString: Agent
@@ -1500,18 +1433,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1347675965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347675964}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e54a9c2177bbdb4a980bcc905841b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &1347675966
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2250,7 +2171,6 @@ GameObject:
   - component: {fileID: 2053320494}
   - component: {fileID: 2053320493}
   - component: {fileID: 2053320492}
-  - component: {fileID: 2053320491}
   m_Layer: 0
   m_Name: Gunmesh
   m_TagString: Agent
@@ -2272,18 +2192,6 @@ Transform:
   m_Father: {fileID: 58879657}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0.296, z: 0}
---- !u!114 &2053320491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053320489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e54a9c2177bbdb4a980bcc905841b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &2053320492
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2444,7 +2352,6 @@ GameObject:
   - component: {fileID: 2717973985167900018}
   - component: {fileID: 4958328055080338115}
   - component: {fileID: 4958328055080338114}
-  - component: {fileID: 4958328055080338113}
   - component: {fileID: 4958328055080338112}
   m_Layer: 0
   m_Name: lilrobo1
@@ -2466,18 +2373,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.5553823
   m_Center: {x: 4.3316097, y: 1.6139426, z: 2.1939201}
---- !u!114 &4958328055080338113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4958328055080338111}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e54a9c2177bbdb4a980bcc905841b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4958328055080338114
 Rigidbody:
   m_ObjectHideFlags: 0

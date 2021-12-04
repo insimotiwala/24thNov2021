@@ -23,6 +23,6 @@ public class CollisionDetection : MonoBehaviour
         { return; }
         GameObject go = other.gameObject;
         if (go.tag != "Agent") { return; }
-        _mobileUnit.StartConfigure(go);
+        //_mobileUnit.StartConfigure(go);
     }
 }

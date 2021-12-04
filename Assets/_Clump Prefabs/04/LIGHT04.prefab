@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734075379500657662}
   - component: {fileID: 2420204974540974373}
-  - component: {fileID: 8305225183477623980}
+  - component: {fileID: 8448463367748315926}
   m_Layer: 0
   m_Name: LIGHT04
   m_TagString: Agent
@@ -56,7 +56,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8305225183477623980
+--- !u!114 &8448463367748315926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,13 +65,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 734075379500657663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b5443035d47d6046a7f4f59a5445162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 857482327960272864, guid: 34c6d4602cc6e9941b0149032c283047, type: 3}
   Positions:
   - {fileID: 3983862472030437430}
-  Factory: {fileID: 3284848869533848296, guid: a2648d51b4adbc4459385044694623df, type: 3}
+  Factory: {fileID: 212546135698811953, guid: 9358b8f7d27e7874d899691d76fa0168, type: 3}
   ClumpMesh: {fileID: 734075381014980521}
   _reachedTarget: 0
 --- !u!1 &734075380499157779

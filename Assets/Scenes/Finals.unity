@@ -621,7 +621,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 58879657}
-  - component: {fileID: 58879659}
   - component: {fileID: 58879658}
   m_Layer: 0
   m_Name: Gun
@@ -642,8 +641,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2053320490}
+  - {fileID: 682457056}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 84.987, z: 0}
 --- !u!114 &58879658
 MonoBehaviour:
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58879656}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -662,30 +662,9 @@ MonoBehaviour:
   - {fileID: 1666840275}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 58879656}
-  speed: 70
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &58879659
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58879656}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 0
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &74681533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1389,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 131342727}
-  - component: {fileID: 131342726}
   - component: {fileID: 131342725}
   m_Layer: 0
   m_Name: BigTwister 3
@@ -1426,7 +1404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131342724}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -1436,30 +1414,9 @@ MonoBehaviour:
   - {fileID: 625619655}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1148379019}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &131342726
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131342724}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.24
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.62
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &131342727
 Transform:
   m_ObjectHideFlags: 0
@@ -1473,7 +1430,7 @@ Transform:
   m_Children:
   - {fileID: 1148379026}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -11.107, y: 84.496, z: 0}
 --- !u!1 &145115970
 GameObject:
@@ -1925,6 +1882,7 @@ GameObject:
   - component: {fileID: 180511439}
   - component: {fileID: 180511438}
   - component: {fileID: 180511437}
+  - component: {fileID: 180511441}
   m_Layer: 0
   m_Name: statue2
   m_TagString: Untagged
@@ -2009,6 +1967,22 @@ Transform:
   m_Father: {fileID: 145115971}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 81.019, z: 0}
+--- !u!54 &180511441
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180511436}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &191101990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2112,7 @@ GameObject:
   - component: {fileID: 210074807}
   - component: {fileID: 210074806}
   - component: {fileID: 210074805}
+  - component: {fileID: 210074809}
   m_Layer: 0
   m_Name: statue2 (1)
   m_TagString: Untagged
@@ -2239,6 +2214,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210074803}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &210074809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210074803}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &215379773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,7 +3035,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 261889669}
-  - component: {fileID: 261889671}
   - component: {fileID: 261889670}
   m_Layer: 0
   m_Name: Minirobo5
@@ -3066,7 +3056,7 @@ Transform:
   m_Children:
   - {fileID: 3970576876766941735}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &261889670
 MonoBehaviour:
@@ -3075,7 +3065,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261889668}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -3085,30 +3075,9 @@ MonoBehaviour:
   - {fileID: 568985851}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 4465763631256902612}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &261889671
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261889668}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &261958630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,7 +4334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383797161}
-  - component: {fileID: 383797160}
   - component: {fileID: 383797159}
   m_Layer: 0
   m_Name: Light03
@@ -4381,7 +4349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383797158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -4391,30 +4359,9 @@ MonoBehaviour:
   - {fileID: 1192482515}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 812623940}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &383797160
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383797158}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.76
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.9
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &383797161
 Transform:
   m_ObjectHideFlags: 0
@@ -4428,7 +4375,7 @@ Transform:
   m_Children:
   - {fileID: 812623948}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395559779
 GameObject:
@@ -4795,7 +4742,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 428210453}
-  - component: {fileID: 428210452}
   - component: {fileID: 428210454}
   m_Layer: 0
   m_Name: Body1
@@ -4804,28 +4750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!195 &428210452
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428210451}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.89
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &428210453
 Transform:
   m_ObjectHideFlags: 0
@@ -4839,7 +4763,7 @@ Transform:
   m_Children:
   - {fileID: 1928339948}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &428210454
 MonoBehaviour:
@@ -4848,7 +4772,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428210451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -4858,7 +4782,8 @@ MonoBehaviour:
   - {fileID: 437666649}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1928339947}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
 --- !u!1 &435211179
 GameObject:
@@ -4869,7 +4794,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 435211182}
-  - component: {fileID: 435211181}
   - component: {fileID: 435211180}
   m_Layer: 0
   m_Name: Gun2
@@ -4885,7 +4809,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435211179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -4895,30 +4819,9 @@ MonoBehaviour:
   - {fileID: 35810274}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1347675964}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &435211181
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435211179}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.88
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &435211182
 Transform:
   m_ObjectHideFlags: 0
@@ -4932,7 +4835,7 @@ Transform:
   m_Children:
   - {fileID: 1347675971}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 84.987, z: 0}
 --- !u!1 &437666649
 GameObject:
@@ -5496,7 +5399,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486033402}
-  - component: {fileID: 486033401}
   - component: {fileID: 486033400}
   m_Layer: 0
   m_Name: BigTwister
@@ -5512,7 +5414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486033399}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -5522,30 +5424,9 @@ MonoBehaviour:
   - {fileID: 1394226389}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1992812209}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &486033401
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486033399}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.24
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.62
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &486033402
 Transform:
   m_ObjectHideFlags: 0
@@ -5559,7 +5440,7 @@ Transform:
   m_Children:
   - {fileID: 1992812216}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 84.496, z: 0}
 --- !u!1 &487184669
 GameObject:
@@ -5594,10 +5475,10 @@ RectTransform:
   m_Father: {fileID: 2008395237}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -198}
-  m_SizeDelta: {x: 26, y: 60}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -282, y: 26}
+  m_SizeDelta: {x: 1104, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487184671
 MonoBehaviour:
@@ -5621,7 +5502,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f6b00c89ac184e4f9c85356f942a8d7, type: 3}
-    m_FontSize: 15
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -6122,7 +6003,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520243592}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6172,7 +6053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520243592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 99.10285, z: -9}
+  m_LocalPosition: {x: -55.4, y: 99.10285, z: -242.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915389625}
@@ -7361,7 +7242,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618243175}
-  - component: {fileID: 618243177}
   - component: {fileID: 618243176}
   m_Layer: 0
   m_Name: Minirobo1
@@ -7383,7 +7263,7 @@ Transform:
   m_Children:
   - {fileID: 4342326944998353538}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &618243176
 MonoBehaviour:
@@ -7392,7 +7272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618243174}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -7402,30 +7282,9 @@ MonoBehaviour:
   - {fileID: 1532105207}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 4958328055080338111}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &618243177
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618243174}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &618663677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7561,7 +7420,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 622602261}
-  - component: {fileID: 622602260}
   - component: {fileID: 622602262}
   m_Layer: 0
   m_Name: Light02
@@ -7570,28 +7428,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!195 &622602260
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622602259}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.76
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.9
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &622602261
 Transform:
   m_ObjectHideFlags: 0
@@ -7605,7 +7441,7 @@ Transform:
   m_Children:
   - {fileID: 1234417863}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &622602262
 MonoBehaviour:
@@ -7614,7 +7450,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622602259}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -7624,7 +7460,8 @@ MonoBehaviour:
   - {fileID: 1450544297}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1234417862}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
 --- !u!1 &625619655
 GameObject:
@@ -8348,7 +8185,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675556139}
-  - component: {fileID: 675556138}
   - component: {fileID: 675556137}
   m_Layer: 0
   m_Name: BigTwister5
@@ -8364,7 +8200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675556136}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -8374,30 +8210,9 @@ MonoBehaviour:
   - {fileID: 1251139907}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1011261162}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &675556138
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675556136}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.24
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.62
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &675556139
 Transform:
   m_ObjectHideFlags: 0
@@ -8411,7 +8226,7 @@ Transform:
   m_Children:
   - {fileID: 1011261169}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -38.824, y: 84.496, z: 0}
 --- !u!1 &679711864
 GameObject:
@@ -8526,8 +8341,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682457055}
-  m_LocalRotation: {x: -0, y: -0.5103413, z: -0, w: 0.859972}
-  m_LocalPosition: {x: 674.6, y: 25.34, z: 142.1}
+  m_LocalRotation: {x: -0, y: -0.9572196, z: -0, w: 0.2893627}
+  m_LocalPosition: {x: -23.22475, y: -0.698082, z: -16.433563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1096873868}
@@ -8557,7 +8372,7 @@ Transform:
   - {fileID: 1750139514}
   - {fileID: 1443950853}
   - {fileID: 568985852}
-  m_Father: {fileID: 1855027077}
+  m_Father: {fileID: 58879657}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -61.373, z: 0}
 --- !u!114 &682457057
@@ -9247,7 +9062,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 739477113}
-  - component: {fileID: 739477112}
   - component: {fileID: 739477111}
   m_Layer: 0
   m_Name: BigTwister 4
@@ -9263,7 +9077,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739477110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -9273,30 +9087,9 @@ MonoBehaviour:
   - {fileID: 202008668}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 763186122}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &739477112
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739477110}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.24
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.62
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &739477113
 Transform:
   m_ObjectHideFlags: 0
@@ -9310,7 +9103,7 @@ Transform:
   m_Children:
   - {fileID: 763186129}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -39.058, y: 84.496, z: 0}
 --- !u!1 &749076451
 GameObject:
@@ -9555,7 +9348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 779734180}
-  - component: {fileID: 779734179}
   - component: {fileID: 779734178}
   m_Layer: 0
   m_Name: Heart 3
@@ -9571,7 +9363,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779734177}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -9581,30 +9373,9 @@ MonoBehaviour:
   - {fileID: 1783114184}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1578310736}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &779734179
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779734177}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.69
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.89
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &779734180
 Transform:
   m_ObjectHideFlags: 0
@@ -9618,7 +9389,7 @@ Transform:
   m_Children:
   - {fileID: 1578310742}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -92.455, z: 0}
 --- !u!1 &783521724
 GameObject:
@@ -10462,7 +10233,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 856696743}
-  - component: {fileID: 856696742}
   - component: {fileID: 856696741}
   m_Layer: 0
   m_Name: Heart 2
@@ -10478,7 +10248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856696740}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -10488,30 +10258,9 @@ MonoBehaviour:
   - {fileID: 2007553759}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 856696740}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &856696742
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856696740}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.61
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.43
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &856696743
 Transform:
   m_ObjectHideFlags: 0
@@ -10525,7 +10274,7 @@ Transform:
   m_Children:
   - {fileID: 1406975289}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -92.455, z: 0}
 --- !u!1 &863235982
 GameObject:
@@ -11316,7 +11065,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920150609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11498,7 +11247,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952078695}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11548,7 +11297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952078695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -152.3, y: 99.10285, z: -215.7}
+  m_LocalPosition: {x: -162, y: 99.10285, z: -202.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915389625}
@@ -11713,7 +11462,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964651856}
-  - component: {fileID: 964651855}
   - component: {fileID: 964651854}
   m_Layer: 0
   m_Name: Gun5
@@ -11729,7 +11477,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964651853}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -11739,30 +11487,9 @@ MonoBehaviour:
   - {fileID: 703290882}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1226502761}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &964651855
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964651853}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &964651856
 Transform:
   m_ObjectHideFlags: 0
@@ -11776,7 +11503,7 @@ Transform:
   m_Children:
   - {fileID: 1226502768}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 63.47, z: 0}
 --- !u!1 &967961052
 GameObject:
@@ -13160,7 +12887,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093946555}
-  - component: {fileID: 1093946554}
   - component: {fileID: 1093946553}
   m_Layer: 0
   m_Name: Heart 4
@@ -13176,7 +12902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093946552}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -13186,30 +12912,9 @@ MonoBehaviour:
   - {fileID: 1685482150}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 358829424}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1093946554
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093946552}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.78
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2.18
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1093946555
 Transform:
   m_ObjectHideFlags: 0
@@ -13223,7 +12928,7 @@ Transform:
   m_Children:
   - {fileID: 358829430}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -92.455, z: 0}
 --- !u!1 &1096537113
 GameObject:
@@ -13234,7 +12939,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1096537114}
-  - component: {fileID: 1096537116}
   - component: {fileID: 1096537115}
   m_Layer: 0
   m_Name: Minirobo2
@@ -13256,7 +12960,7 @@ Transform:
   m_Children:
   - {fileID: 8709577416560183757}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1096537115
 MonoBehaviour:
@@ -13265,7 +12969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096537113}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -13275,30 +12979,9 @@ MonoBehaviour:
   - {fileID: 1478913331}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 6435571964313177492}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1096537116
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096537113}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1096873867
 GameObject:
   m_ObjectHideFlags: 0
@@ -13846,7 +13529,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151217156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13896,7 +13579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151217156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30, y: 99.10285, z: -256}
+  m_LocalPosition: {x: 11.5, y: 99.10285, z: 10.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915389625}
@@ -16115,6 +15798,7 @@ GameObject:
   - component: {fileID: 1392883952}
   - component: {fileID: 1392883951}
   - component: {fileID: 1392883950}
+  - component: {fileID: 1392883954}
   m_Layer: 0
   m_Name: statue4
   m_TagString: Untagged
@@ -16199,6 +15883,22 @@ Transform:
   m_Father: {fileID: 145115971}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1392883954
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392883949}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1394226389
 GameObject:
   m_ObjectHideFlags: 0
@@ -16324,7 +16024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400264180}
-  - component: {fileID: 1400264179}
   - component: {fileID: 1400264178}
   m_Layer: 0
   m_Name: Gun4
@@ -16340,7 +16039,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400264177}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -16350,30 +16049,9 @@ MonoBehaviour:
   - {fileID: 235533262}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1389645162}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1400264179
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400264177}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1400264180
 Transform:
   m_ObjectHideFlags: 0
@@ -16387,7 +16065,7 @@ Transform:
   m_Children:
   - {fileID: 1389645169}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 63.47, z: 0}
 --- !u!1 &1406975283
 GameObject:
@@ -16632,7 +16310,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410210504}
-  - component: {fileID: 1410210506}
   - component: {fileID: 1410210505}
   m_Layer: 0
   m_Name: Minirobo4
@@ -16654,7 +16331,7 @@ Transform:
   m_Children:
   - {fileID: 3168294803739615744}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1410210505
 MonoBehaviour:
@@ -16663,7 +16340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410210503}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -16673,30 +16350,9 @@ MonoBehaviour:
   - {fileID: 1443950852}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 8969198967388584856}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1410210506
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410210503}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1420126402
 GameObject:
   m_ObjectHideFlags: 0
@@ -17963,6 +17619,7 @@ MonoBehaviour:
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 0}
   speed: 0
+  MoveDistance: 1
   _reachedTarget: 0
 --- !u!195 &1489058550
 NavMeshAgent:
@@ -18330,7 +17987,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1533586349}
-  - component: {fileID: 1533586351}
   - component: {fileID: 1533586350}
   m_Layer: 0
   m_Name: Minirobo3
@@ -18352,7 +18008,7 @@ Transform:
   m_Children:
   - {fileID: 2556838369539533942}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1533586350
 MonoBehaviour:
@@ -18361,7 +18017,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533586348}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -18371,30 +18027,9 @@ MonoBehaviour:
   - {fileID: 1750139513}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 5082078495441034671}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1533586351
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533586348}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1544546518
 GameObject:
   m_ObjectHideFlags: 0
@@ -19381,6 +19016,7 @@ GameObject:
   - component: {fileID: 1666524821}
   - component: {fileID: 1666524820}
   - component: {fileID: 1666524819}
+  - component: {fileID: 1666524823}
   m_Layer: 0
   m_Name: statue1
   m_TagString: Untagged
@@ -19465,6 +19101,22 @@ Transform:
   m_Father: {fileID: 145115971}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -38.237, z: 0}
+--- !u!54 &1666524823
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666524818}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1666840275
 GameObject:
   m_ObjectHideFlags: 0
@@ -19552,7 +19204,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675567924}
-  - component: {fileID: 1675567923}
   - component: {fileID: 1675567925}
   m_Layer: 0
   m_Name: Light01
@@ -19561,28 +19212,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!195 &1675567923
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675567922}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.76
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.9
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1675567924
 Transform:
   m_ObjectHideFlags: 0
@@ -19596,7 +19225,7 @@ Transform:
   m_Children:
   - {fileID: 301675382}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1675567925
 MonoBehaviour:
@@ -19605,7 +19234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675567922}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -19615,7 +19244,8 @@ MonoBehaviour:
   - {fileID: 1434977735}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 301675381}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
 --- !u!1 &1678736793
 GameObject:
@@ -19751,7 +19381,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685722666}
-  - component: {fileID: 1685722665}
   - component: {fileID: 1685722664}
   m_Layer: 0
   m_Name: BigTwister 2
@@ -19767,7 +19396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685722663}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -19777,30 +19406,9 @@ MonoBehaviour:
   - {fileID: 513323773}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 855259360}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1685722665
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685722663}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.24
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.62
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1685722666
 Transform:
   m_ObjectHideFlags: 0
@@ -19814,7 +19422,7 @@ Transform:
   m_Children:
   - {fileID: 855259367}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -38.824, y: 84.496, z: 0}
 --- !u!1 &1690079856
 GameObject:
@@ -20728,7 +20336,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806230478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21231,7 +20839,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 867221369}
-  - {fileID: 682457056}
   - {fileID: 58879657}
   - {fileID: 435211182}
   - {fileID: 2134941608}
@@ -21398,6 +21005,7 @@ GameObject:
   - component: {fileID: 1857927669}
   - component: {fileID: 1857927668}
   - component: {fileID: 1857927667}
+  - component: {fileID: 1857927671}
   m_Layer: 0
   m_Name: statue4 (1)
   m_TagString: Untagged
@@ -21435,7 +21043,7 @@ MonoBehaviour:
   - {fileID: 9177666560892759609, guid: c5606b07c4e342b48b7a157e8212cd2e, type: 3}
   TargetTag: MA2
   MakeLimit: 1
-  MakeRate: 6
+  MakeRate: 10
 --- !u!136 &1857927668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21499,6 +21107,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857927665}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1857927671
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857927665}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1861784266
 GameObject:
   m_ObjectHideFlags: 0
@@ -21728,7 +21352,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1872355824}
-  - component: {fileID: 1872355823}
   - component: {fileID: 1872355822}
   m_Layer: 0
   m_Name: Body2
@@ -21744,7 +21367,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872355821}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -21754,30 +21377,9 @@ MonoBehaviour:
   - {fileID: 1167711604}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1089120690}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1872355823
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872355821}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.89
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1872355824
 Transform:
   m_ObjectHideFlags: 0
@@ -21786,12 +21388,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872355821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 522.1, y: 29.39, z: 224.9}
+  m_LocalPosition: {x: 386.6, y: 29.39, z: 327.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1089120694}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899853675
 GameObject:
@@ -22371,6 +21973,7 @@ GameObject:
   - component: {fileID: 1949855841}
   - component: {fileID: 1949855840}
   - component: {fileID: 1949855839}
+  - component: {fileID: 1949855843}
   m_Layer: 0
   m_Name: statue3
   m_TagString: Untagged
@@ -22455,6 +22058,22 @@ Transform:
   m_Father: {fileID: 145115971}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1949855843
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949855838}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1957376423
 GameObject:
   m_ObjectHideFlags: 0
@@ -22631,7 +22250,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979366848}
-  - component: {fileID: 1979366847}
   - component: {fileID: 1979366846}
   m_Layer: 0
   m_Name: Heart
@@ -22647,7 +22265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979366845}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -22657,30 +22275,9 @@ MonoBehaviour:
   - {fileID: 554447770}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1979366845}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &1979366847
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979366845}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.78
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.24
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1979366848
 Transform:
   m_ObjectHideFlags: 0
@@ -22694,7 +22291,7 @@ Transform:
   m_Children:
   - {fileID: 1465394676}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -92.455, z: 0}
 --- !u!1 &1983323068
 GameObject:
@@ -23615,10 +23212,10 @@ RectTransform:
   m_Father: {fileID: 2008395237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 126}
-  m_SizeDelta: {x: 807.1218, y: 51.600006}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -11, y: -40}
+  m_SizeDelta: {x: 1200, y: 51.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054998635
 MonoBehaviour:
@@ -23642,7 +23239,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f6b00c89ac184e4f9c85356f942a8d7, type: 3}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -23773,6 +23370,7 @@ GameObject:
   - component: {fileID: 2095155328}
   - component: {fileID: 2095155327}
   - component: {fileID: 2095155326}
+  - component: {fileID: 2095155330}
   m_Layer: 0
   m_Name: statue1 (1)
   m_TagString: Untagged
@@ -23874,6 +23472,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095155324}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2095155330
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095155324}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2123258761
 GameObject:
   m_ObjectHideFlags: 0
@@ -23942,7 +23556,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134941608}
-  - component: {fileID: 2134941607}
   - component: {fileID: 2134941606}
   m_Layer: 0
   m_Name: Gun 3
@@ -23958,7 +23571,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134941605}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
   m_Name: 
@@ -23968,30 +23581,9 @@ MonoBehaviour:
   - {fileID: 576125939}
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 1929484812}
-  speed: 50
+  speed: 1
+  MoveDistance: 30
   _reachedTarget: 0
---- !u!195 &2134941607
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134941605}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 360
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.64
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &2134941608
 Transform:
   m_ObjectHideFlags: 0
@@ -24005,7 +23597,7 @@ Transform:
   m_Children:
   - {fileID: 1929484819}
   m_Father: {fileID: 1855027077}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 63.47, z: 0}
 --- !u!1 &2145544812
 GameObject:
@@ -24060,7 +23652,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145544812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -24946,6 +24538,7 @@ MonoBehaviour:
   Factory: {fileID: 7986858033800634495, guid: 414a159aa8619b84fb19e576e272fd43, type: 3}
   ClumpMesh: {fileID: 0}
   speed: 0
+  MoveDistance: 1
   _reachedTarget: 0
 --- !u!33 &884895881816463057
 MeshFilter:
@@ -27312,7 +26905,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4336792087657361362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -28441,6 +28034,7 @@ MonoBehaviour:
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 0}
   speed: 0
+  MoveDistance: 1
   _reachedTarget: 0
 --- !u!23 &5831163357408622835
 MeshRenderer:
@@ -30031,7 +29625,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362594047310812049}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -30371,7 +29965,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6729177438699150717}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -31755,6 +31349,7 @@ MonoBehaviour:
   Factory: {fileID: 0}
   ClumpMesh: {fileID: 0}
   speed: 0
+  MoveDistance: 1
   _reachedTarget: 0
 --- !u!114 &8778600134384388266
 MonoBehaviour:
@@ -31900,7 +31495,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2328346164486748331}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

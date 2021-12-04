@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8068910775768085390}
   - component: {fileID: 5886315507733577191}
-  - component: {fileID: 3367628814250564957}
+  - component: {fileID: 1683422478043000817}
   m_Layer: 0
   m_Name: GUN03-1
   m_TagString: Agent
@@ -313,7 +313,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3367628814250564957
+--- !u!114 &1683422478043000817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,12 +322,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6553121634221710600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62910f4a26dbea4b80ac80e6b1abd90, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b5443035d47d6046a7f4f59a5445162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 81124699315974742, guid: 7889f5d45ab86b84c8fafae569762973, type: 3}
   Positions:
   - {fileID: 767305333597013803}
-  Factory: {fileID: 3284848869533848296, guid: a2648d51b4adbc4459385044694623df, type: 3}
+  Factory: {fileID: 3731342619662842203, guid: a45abe9c448d43e4a922a156e4ac310e, type: 3}
   ClumpMesh: {fileID: 5884156851152279235}
   _reachedTarget: 0
